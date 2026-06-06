@@ -1,9 +1,5 @@
 name: Node.js
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: [push] 
 
 jobs:
   test:
@@ -14,3 +10,7 @@ jobs:
 
       - name: Run tests
         run: npm test
+        
+ 
+        
+
