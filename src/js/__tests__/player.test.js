@@ -1,6 +1,6 @@
 import { healthIndication, healthSort } from '../player';
 
-const players = [
+test.each([
 	[
 		{ name: 'Маг', health: 75 }, "healthy"
 	],
@@ -28,11 +28,6 @@ const players = [
 	[
 		{ name: 'Маг', health: 0 }, "critical"
 	],
-];
-
-
-const handler = test.each(players);
-
-handler("color", (player, expert) => {
+])("color  %s ", (player, expert) => {
 	expect(healthIndication(player)).toBe(expert);
 })
